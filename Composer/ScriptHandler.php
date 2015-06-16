@@ -2,11 +2,12 @@
 
 namespace Knp\RadBundle\Composer;
 
+use Composer\Script\CommandEvent;
 use Sensio\Bundle\DistributionBundle\Composer\ScriptHandler as BaseScriptHandler;
 
 class ScriptHandler extends BaseScriptHandler
 {
-    public static function installParametersFile($event)
+    public static function installParametersFile(CommandEvent $event)
     {
         $options = self::getOptions($event);
         $appDir = $options['symfony-app-dir'];
